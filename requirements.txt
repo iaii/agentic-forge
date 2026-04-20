@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+crewai[tools]
+langchain-openai
+sse-starlette
+python-dotenv

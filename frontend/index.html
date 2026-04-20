@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agentic Forge</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="background-blobs">
+        <div class="blob red-blob"></div>
+        <div class="blob blue-blob"></div>
+    </div>
+
+    <main class="container">
+        <!-- Main Hub View -->
+        <section id="hub-view" class="view active">
+            <header>
+                <h1>Agentic <span>Forge</span></h1>
+                <p>Select a multi-agent scenario to watch them collaborate in real-time.</p>
+            </header>
+            
+            <div class="scenario-grid">
+                <div class="scenario-card" data-scenario="roast">
+                    <div class="icon">🔥</div>
+                    <h2>Startup Roaster</h2>
+                    <p>Visionary, Investor, and Consumer debate your startup idea.</p>
+                </div>
+                <div class="scenario-card" data-scenario="zombie">
+                    <div class="icon">🧟‍♂️</div>
+                    <h2>Zombie Survival</h2>
+                    <p>Scout, Quartermaster, and Tactician formulate a 48h plan.</p>
+                </div>
+                <div class="scenario-card" data-scenario="excuse">
+                    <div class="icon">🛑</div>
+                    <h2>Excuse Generator</h2>
+                    <p>Storyteller, Skeptic, and PR Manager craft the perfect lie.</p>
+                </div>
+                <div class="scenario-card" data-scenario="rpg">
+                    <div class="icon">⚔️</div>
+                    <h2>RPG Forge</h2>
+                    <p>Genealogist, Psychologist, and Chronicler build an epic backstory.</p>
+                </div>
+                <div class="scenario-card" data-scenario="time">
+                    <div class="icon">⏳</div>
+                    <h2>Time Travel</h2>
+                    <p>Historian, Chaos Theorist, and Future Chronicler ripple the timeline.</p>
+                </div>
+                <div class="scenario-card" data-scenario="murder">
+                    <div class="icon">🕵️</div>
+                    <h2>Murder Mystery</h2>
+                    <p>Forensic Tech, Profiler, and Detective solve an unsolved crime.</p>
+                </div>
+                <div class="scenario-card" data-scenario="teach">
+                    <div class="icon">🎓</div>
+                    <h2>AI Masterclass</h2>
+                    <p>Dynamic AI crew teaches you any topic using different pedagogical styles.</p>
+                </div>
+                <div class="scenario-card" data-scenario="sysdesign">
+                    <div class="icon">🏗️</div>
+                    <h2>System Design</h2>
+                    <p>PM, Architect, and Security Expert build virtual apps.</p>
+                </div>
+                <div class="scenario-card" data-scenario="component">
+                    <div class="icon">✨</div>
+                    <h2>Micro-Component</h2>
+                    <p>Designer and Developers write raw HTML UI snippets.</p>
+                </div>
+                <div class="scenario-card" data-scenario="fitness">
+                    <div class="icon">💪</div>
+                    <h2>Fitness Planner</h2>
+                    <p>Nutritionist, Trainer, and Coach build your complete fitness program.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dynamic Scenario View -->
+        <section id="scenario-view" class="view">
+            <button class="back-btn" id="back-btn">← Back to Hub</button>
+            <h2 id="scenario-title">Scenario</h2>
+            
+            <div class="glass-panel form-panel">
+                <form id="scenario-form">
+                    <div id="dynamic-inputs">
+                        <!-- Inputs injected via JS -->
+                    </div>
+                    <div class="button-group" style="display:flex; gap:10px; margin-top:20px;">
+                        <button type="button" class="submit-btn" id="randomize-btn" style="background: rgba(255,255,255,0.1);">🎲 Random Idea</button>
+                        <button type="submit" class="submit-btn" id="run-btn" style="flex:1;">Run Crew <span class="spinner" id="spinner"></span></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="glass-panel chat-panel">
+                <div class="chat-container" id="chat-container">
+                    <div class="empty-state">Agents are standing by...</div>
+                </div>
+                <div class="typing-indicator" id="typing-indicator">
+                    <span id="active-agent">Agent</span> is thinking<span class="dots">...</span>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/static/app.js"></script>
+</body>
+</html>
